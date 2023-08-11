@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@1,9..40,200&family=Kumbh+Sans:wght@300&display=swap");
+
+:root {
+  --Very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --Soft-red: hsl(14, 88%, 65%);
+  --Soft-violet: hsl(273, 75%, 66%);
+  --Soft-blue: hsl(240, 73%, 65%);
+  --Very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --Dark-grayish-blue: hsl(240, 6%, 50%);
+  --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Kumbh Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.card {
+  width: 375px;
+}
+
+#left-side-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+}
+
+.image1,
+.image2,
+.image3 {
+  position: absolute;
+}
+
+.image1 {
+  z-index: 2;
+  top: 1rem;
+}
+
+.image2 {
+  z-index: 1;
+  top: 7rem;
+}
+.image3 {
+  top: 46%;
+  z-index: 3;
+  left: -9%;
+}
+
+#right-side-text {
+  background-color: var(--Light-grayish-blue);
+  margin-top: 10rem;
+  padding: 2rem;
+  border: none;
+  outline: none;
+  border-radius: 2rem;
+}
+
+#right-side-text h1 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.question:hover {
+  color: var(--Soft-red);
+}
+
+.answer {
+  display: none;
+}
+
+.question button {
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.question button:hover {
+  background-color: var(--Light-grayish-blue);
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 750px;
+    margin-block: 2rem;
+  }
+
+  .card-container {
+    background-color: var(--Light-grayish-blue);
+    display: flex;
+    border-radius: 2rem;
+  }
+  #left-side-images {
+    position: relative;
+    flex: 1;
+  }
+
+  .image1,
+  .image2 {
+    position: absolute;
+  }
+
+  .image1 {
+    top: 16%;
+    left: -7%;
+    z-index: 2;
+  }
+
+  .image2 {
+    left: -5%;
+    z-index: 1;
+    top: 7%;
+  }
+
+  .image3 {
+    top: 46%;
+    z-index: 3;
+    left: -8%;
+  }
+  #right-side-text {
+    background-color: transparent;
+    flex: 1;
+    margin: 0;
+  }
+}
